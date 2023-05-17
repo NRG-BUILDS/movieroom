@@ -9,7 +9,6 @@ const useFetch = (url) => {
         .then(res => {
             if(!res.ok) { 
                 throw Error('Soomething really bad happened');
-                setIsPending(false);
             }
             return res.json();
         })
