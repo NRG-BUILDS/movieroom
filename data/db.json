@@ -1,0 +1,28 @@
+{
+  "blogs": [
+    {
+      "title": "Food is Life",
+      "author": "Damilola Omolaju",
+      "body": "lorem ispum et ammet de cancer",
+      "id": 1
+    },
+    {
+      "title": "War At The Edge",
+      "author": "Damilola Omolaju",
+      "body": "lorem ispum et ammet de cancer",
+      "id": 2
+    },
+    {
+      "title": "The Joy OF Childhood",
+      "author": "Damilola Omolaju",
+      "body": "lorem ispum et ammet de cancer",
+      "id": 3
+    },
+    {
+      "title": "the joy of childhood",
+      "body": "one picture a thousand words\nlittle feet cant keep off the mud\nin the happiness of their own world\n\n\namidst the algae and fungi\nand their grumbling stomach due to hunger\nthey run helter-skelter\nwith innocence and laughter",
+      "author": "betty's lines",
+      "id": 5
+    }
+  ]
+}
