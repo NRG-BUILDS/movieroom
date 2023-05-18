@@ -8,10 +8,12 @@ const BigMovieList = ( {title, lists, size} ) => {
             <div className="tileSlide">
                 {lists.map((movie) => (
                     <div className={size} key={movie.id}>
-                        <img src={'https://image.tmdb.org/t/p/w1280' + movie.backdrop_path} alt="" />
+                        <div className="movieImgContainer">
+                            <img src={'https://image.tmdb.org/t/p/w1280' + movie.poster_path} alt="" /> 
+                        </div>
                         <div className="tileInfo">
                             <span className="tileTitle">{movie.title}</span>
-                            <div>
+                            <div >
                                 {movie.release_date && <span className="tileYear">{movie.release_date.slice(0, 4)}</span>}
                                 {movie.vote_average && <span className="tileRating"><span className="material-icons-outlined">star</span>{movie.vote_average}</span>}
                             </div>
