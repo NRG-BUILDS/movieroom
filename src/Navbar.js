@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import profilePic from './images/profile.jpg'
-import logo from './logo.svg'
 
 const Navbar = () => {
     const username = 'Emmanuel Omolaju';
@@ -17,7 +16,7 @@ const Navbar = () => {
         <nav className="navbar">
             <Link to='/'>
                 <div className="logo">
-                    <img src={ logo } alt="" />
+                    <span><span style={{color:'red'}}>NRG</span> Movieroom</span>
                 </div>
             </Link>
             

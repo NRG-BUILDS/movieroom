@@ -1,4 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap'); */
 @font-face {
   font-family: Inter;
   src: url('/assets/fonts/Inter-VariableFont_slnt\,wght.ttf');
@@ -6,9 +5,7 @@
 body {
   font-size: 15px;
   background-color: var(--black);
-  color: var(--white);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: var(--textColor);
 }
 * { 
   margin: 0;
@@ -19,15 +16,19 @@ body {
   --darkgrey: #1a1a1a;
   --grey: #262626;
   --black: #000000;
-  --white: #ffffff;
+  --textColor: #ffffff;
   --red: #ff0000;
 }
 :root .light {
   --darkgrey: #925656;
   --grey: #262626;
   --black: #fafafa;
-  --white: #000000;
+  --textColor: #000000;
   --red: #ff0000;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 img { 
   width: 100%;
@@ -50,7 +51,7 @@ h1 {font-size: 2em;}
   padding: .5rem .2rem;
   width: 100%;
   display: grid;
-  grid-template-columns: 30% 60% 8%;
+  grid-template-columns: 60% 20% 18%;
   grid-template-rows: 45px;
   align-items: center;
   justify-content: space-between; 
@@ -63,7 +64,7 @@ h1 {font-size: 2em;}
   position: relative;
   font-size: .7rem;
   display: grid;
-  grid-template-columns: 20% 60% 15%;
+  grid-template-columns: 50% 50%;
   grid-template-rows: inherit;
   justify-content: center;
   gap: 5px;
@@ -72,7 +73,7 @@ h1 {font-size: 2em;}
   cursor: pointer;
   border-radius: 12px;
   padding: 5px;
-  border: 3px solid var(--grey);
+  border: 2px solid var(--grey);
 }
 .userMenuBtn .material-icons-outlined {font-size: 16px;}
 .userMenuBtn>div {
@@ -104,9 +105,10 @@ h1 {font-size: 2em;}
 .userMenu h5 {margin: 1rem 0;}
 .navMenuBtn, .closeNavMenu {
   background-color: inherit;
+  font-size: 24px;
   float: right;
   border: none;
-  color: var(--white);
+  color: var(--textColor);
 }
 .menuContent { 
   max-width: 90%;
@@ -124,10 +126,10 @@ h1 {font-size: 2em;}
   border-radius: 20px;
   padding: 10px 10px;
 }
-
-
+.usernameContainer {
+  display: none;
+}
 .profileImgContainer img {
-  
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--grey);
@@ -147,7 +149,7 @@ h1 {font-size: 2em;}
   scrollbar-width: none;
 }
 .navbarSection, .userMenu .section {
-  color: var(--white);
+  color: var(--textColor);
   padding: 1.2rem 0;
 }
 .navMenu hr {border-color: var(--grey);}
@@ -162,7 +164,7 @@ h1 {font-size: 2em;}
 }
 
 .navMenu a:hover, .navMenu a:active {
-  background-color: #333;
+  background-color: var(--red);
   outline: 3px solid var(--red);
 }
 /* CONTENT SECTION */
@@ -185,7 +187,7 @@ h1 {font-size: 2em;}
 }
 .categoryNav a {
   margin-right: 1.75rem;
-  color: var(--white);
+  color: var(--textColor);
   text-decoration: none;
   opacity: 0.5;
   transition: .3s;
@@ -233,7 +235,7 @@ h1 {font-size: 2em;}
 }
 .tileInfo {
   font-size: 12px;
-  color: var(--white);
+  color: var(--textColor);
   width: 100%;
   background: var(--grey);
   padding: .3rem 1rem;
@@ -286,7 +288,7 @@ h1 {font-size: 2em;}
   border: 3px solid var(--red);
   border-right: none;
   border-radius: 30px 0 0 30px;
-  color: var(--white);
+  color: var(--textColor);
   outline: none;
   transition: .3s;
 }
@@ -299,7 +301,7 @@ h1 {font-size: 2em;}
   border: 3px solid var(--red);
   border-right: none;
   border-radius: 0 30px 30px 0;
-  color: var(--white);
+  color: var(--textColor);
 }
 .searchDisplay .tileSlide {
   display: grid;
@@ -347,7 +349,7 @@ h1 {font-size: 2em;}
   background-color: var(--red);
   border-radius: 20px;
   border: none;
-  color: var(--white);
+  color: var(--textColor);
 }
 .searchDisplay .tileSlide>div {margin: 0;}
 
@@ -356,7 +358,7 @@ h1 {font-size: 2em;}
   background-color: transparent;
   padding: .5rem 1rem;
   border-radius: 20px;
-  color: var(--white);
+  color: var(--textColor);
 
 }
 @media screen and (min-width: 600px) {
@@ -373,22 +375,26 @@ h1 {font-size: 2em;}
     padding: 1rem 1.2rem;
     overflow: none;
   }
+  .userMenuBtn {
+    grid-template-columns: 20% 60% 15%;
+  }
   .userMenu {
     width: 25vw;
   }
 
   .navMenu a { color: transparent; }
-  .navMenu .material-icons-outlined {color: var(--white);}
+  .navMenu .material-icons-outlined {color: var(--textColor);}
   .navMenu:hover {
     width: 20%;
     padding: 1rem 1.5rem;
   }
-  .navMenu:hover a { color: var(--white); }
+  .navMenu:hover a { color: var(--textColor); }
   .navMenuBtn, .closeNavMenu {display: none;}
   .searchDisplay .tileSlide {
     grid-template-columns: 33% 33% 33%; 
   }
-  .tileSlide>div { 
+  .tileSlide>div,
+  .usernameContainer { 
     display: block;
   }
   .bigMovieTile {
