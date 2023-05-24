@@ -56,9 +56,9 @@ h1 {font-size: 2em;}
   align-items: center;
   justify-content: space-between; 
 }
-.logo img {
-  max-width: 50px;
-  max-height: 50px;
+.logo {
+  font-weight: 800;
+  font-size: 18px;
 }
 .userMenuBtn {
   position: relative;
