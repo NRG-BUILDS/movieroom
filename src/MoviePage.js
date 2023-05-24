@@ -43,6 +43,10 @@ const MoviePage = () => {
                 </div>
             </div>
             }
+            {movie && <div className="movieDetailsContainer">
+                
+            </div>
+            }
             {error && <div className="errorContainer">
                     <h1>{ error }</h1>
                     <p>Please try checking your network and try again</p>
