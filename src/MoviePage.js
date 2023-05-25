@@ -77,7 +77,7 @@ const MoviePage = () => {
                             {
                                 return (
                                     <div key={person.id}>
-                                        <img src={"https://image.tmdb.org/t/p/w185" + person.profile_path} className="actor_pic" />
+                                        <img src={"https://image.tmdb.org/t/p/w185" + person.profile_path} alt="" className="actor_pic" />
                                             <span>{person.name}</span>
                                     </div>
                                 );
@@ -93,7 +93,7 @@ const MoviePage = () => {
                         <div className="videoItemContainer" key={video.id}>
                             <h3>{video.name}</h3>
                             <iframe src={`https://www.youtube.com/embed/${video.key}`}
-                                class="youtube_container" >
+                                title="youtube_container" >
                                 
                             </iframe>
                         </div>
