@@ -106,7 +106,7 @@ h1 {font-size: 2em;}
   height: 100%;
   width: 100vw;
   overflow: auto;
-  z-index: 3;
+  z-index: 999;
   background-color: var(--darkgrey);
 }
 .userMenu img {
