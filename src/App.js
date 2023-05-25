@@ -7,6 +7,7 @@ import TopRatedSection from './TopRatedSection.js';
 import Settings from './Settings.js';
 import UserMenu from './UserMenu.js';
 import MoviePage from './MoviePage.js';
+import Footer from './Footer.js';
 function App() {
 
   return (
@@ -35,6 +36,7 @@ function App() {
               </Route>
                 
             </Switch> 
+            <Footer/>
           </div>
         </div>
         

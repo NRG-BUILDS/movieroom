@@ -452,6 +452,35 @@ h1 {font-size: 2em;}
   color: var(--textColor);
 
 }
+footer { 
+  text-align: center;
+  margin-top: 50px;
+}
+.footerLogo_container { 
+  background-color: red;
+  padding: 7rem 20%;
+  border-radius: 50px
+}
+.footerLogo_container h2>span { 
+  color: black;
+} 
+.socialLinks a{ 
+  color: inherit;
+  font-size: 24px;
+  margin: auto 10px;
+  text-decoration: none;
+}
+.credits { 
+  background-color: darkred;
+  padding: 5%;
+  border-radius: 50px 50px 0 0;
+}
+.credits a { 
+  color: white;
+  text-decoration: underline;
+  font-weight: 800;
+}
+
 @media screen and (min-width: 600px) {
   .container {
     margin-left: 5%;
