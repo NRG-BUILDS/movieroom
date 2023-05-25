@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 
 const MoviePage = () => {
@@ -8,7 +8,7 @@ const MoviePage = () => {
     const [video, setVideo] = useState(null)
     const [error, setError] = useState(false)
 
-    useEffect(() => {
+    const fetchData = () => {
         fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=66ffe7fe1fbf9c25e7766e730cd29fcd`)
                 .then(res => res.json())
                 .then(data => {
@@ -32,10 +32,9 @@ const MoviePage = () => {
                 .then(res => res.json())
                 .then(data => { 
                     setVideo(data);
-                    console.log(data)
-                    // data.results[1].key;
-                })        
-    }, [])
+                });
+    }
+    fetchData()
     const getDuration = (time) => {
         let h = Math.floor(time / 60);
         let m = time % 60
