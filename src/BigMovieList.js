@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const BigMovieList = ( {title, lists, size} ) => {
-    console.log(lists)
     return ( 
         <div className="bigMovieList">
-            <h2 className="header">{ title }</h2>
+            <div className="headerWrapper">
+                <h2 className="header">{ title }</h2>
+                <span>Swipe<span className="material-icons-outlined">navigate_next</span></span>
+            </div>
             <div className="tileSlide">
                 {lists.map((movie) => (
                     <div className={size} key={movie.id}>
