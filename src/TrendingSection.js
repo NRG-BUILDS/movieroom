@@ -1,4 +1,5 @@
 import BigMovieList from "./BigMovieList";
+import LoadState from "./LoadState";
 import useFetch from "./useFetch";
 
 const TrendingSection = () => {
@@ -6,12 +7,9 @@ const TrendingSection = () => {
     
     return ( 
         <section className="trendingSection">
-            {isPending && <div className="bigMovieList">Loading...</div>}
+            {isPending && <LoadState mesaage={'Trending'} size={'bigMovieTitle'} isLoading={true}/>}
+            {error && <LoadState mesaage={error} size={'bigMovieTitle'} isLoading={false}/>}
             {movieList && <BigMovieList title='Trending Now' lists={movieList} size="bigMovieTile"/>}
-            {error && <div className="errorContainer">
-                    <h1>{ error }</h1>
-                    <p>Please try checking your network and try again</p>
-                </div>}
         </section>
      );
 }

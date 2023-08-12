@@ -310,6 +310,30 @@ h1 {font-size: 2em;}
   opacity: 1;
 
 }
+.loaderDiv {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.3;
+  animation: loading 1s infinite alternate;
+}
+.errorDiv {
+  width: 100%;
+  height: 100%;
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+@keyframes loading {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
 .bigMovieTile .previewBtn {
  display: block;
 }
